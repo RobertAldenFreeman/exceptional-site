@@ -1,0 +1,104 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ESI - Login</title>
+  <link rel="stylesheet" href="../style/loginSignupStyle.css">
+  <link rel="stylesheet" href="../style/master.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="../scripts/signup.js"></script>
+    <script type="text/javascript" src="../scripts/search.js"></script>
+</head>
+<script>
+  function loginOnLoad(){
+    //loadLoginButton();
+    loadSearchBar();
+  }
+</script>
+
+<body onload="loginOnLoad()">
+
+  <nav>
+  	<div class="navbar">
+  		<div class="nav-logo">
+	  		<a href="../index.html" title="Home"><img src="../images/logo.png" alt="Logo not found. Not good"></a>
+	  	</div>
+	  	<div class="nav-dropdown products">
+	  		<a href="productsPage.html">Products</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="products/product1.html">
+	  				Run, Escape
+	  			</a>
+	  			<a href="products/product2.html">
+	  				Two Weeks
+	  			</a>
+	  			<a href="products/product3.html">
+	  				OverClock
+	  			</a>
+  			</div>
+  		</div>
+	  	<div class="nav-dropdown about" >
+	  		<a href="about.html">About</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="about.html">About</a>
+        		<a href="support.html">Support</a>
+	  		</div>
+	  	</div>
+      <div class="navSearch">
+	  		<div class="searchBar">
+          <input class="searchQuery" type="text" name="search" required placeholder="Search">
+          <button class="searchButton" type="submit" value="Submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+	  	</div>
+	  	<div class="nav-cart">
+	  		<a href="cart.html">Cart</a>
+	  	</div>
+	  	<div class="nav-login">
+	  		<a href="login.html">Login</a>
+	  	</div>
+  	</div>
+  </nav>
+
+
+  <form class="form" action="/login/" method="post">
+    <h1>Login</h1>
+    <input type="text" name="username" required placeholder="Email">
+    <input type="password" name="password" required placeholder="Password">
+    <input type="submit" value="Login" name="" id="submitButton"> Don't have an account? <a href="./signUp.html">Sign up</a>
+  </form>
+
+  <footer>
+
+    <div class="footerGrid">
+
+      <div class="footerCopyright">
+        <p> &copy; Property of Electronic Farts, LLC</p>
+      </div>
+
+      <div class="footerContact">
+        <p><a href="support.html">Contact Us</a></p>
+      </div>
+
+      <div class="footerConnect">
+        <p>Connect With Us</p>
+        <a href="https://www.instagram.com/exceptionalsiteinc/">
+          <img src="../images/icons/instagramIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://twitter.com/ExceptionalSite/">
+          <img src="../images/icons/twitterIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://www.youtube.com/channel/UCiREnMhEko4l5SICsCcYaxQ/">
+          <img src="../images/icons/youtubeIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+      </div>
+
+    </div> <!footerGrid>
+
+  </footer>
+
+
+</body>
+
+</html>

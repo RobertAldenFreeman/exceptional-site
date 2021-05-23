@@ -1,0 +1,116 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ESI - disclaimers</title>
+  <link rel="stylesheet" type="text/css" href="../style/master.css">
+  <link rel="stylesheet" type="text/css" href="../style/about-support-disclaimer.css">
+  <link rel="stylesheet" type="text/css" href="../style/shopping-cart.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript" src="../scripts/shoppingCartFunctions.js"></script>
+  <script type="text/javascript" src="../scripts/signup.js"></script>
+  <script type="text/javascript" src="../scripts/search.js"></script>
+  <script>
+    function mainPageOnLoad(){
+      renderCart();
+      renderLogin();
+      loadSearchBar();
+    }
+  </script>
+</head>
+
+<body onload="mainPageOnLoad()">
+  <nav>
+  	<div class="navbar">
+  		<div class="nav-logo">
+	  		<a href="../index.html" title="Home"><img src="../images/logo.png" alt="Logo not found. Not good"></a>
+	  	</div>
+	  	<div class="nav-dropdown products">
+	  		<a href="productsPage.html">Products</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="products/product1.html">
+	  				Run, Escape
+	  			</a>
+	  			<a href="products/product2.html">
+	  				Two Weeks
+	  			</a>
+	  			<a href="products/product3.html">
+	  				OverClock
+	  			</a>
+  			</div>
+  		</div>
+	  	<div class="nav-dropdown about" >
+	  		<a href="about.html">About</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="about.html">About</a>
+        		<a href="support.html">Support</a>
+	  		</div>
+	  	</div>
+      <div class="navSearch">
+	  		<div class="searchBar">
+          <input class="searchQuery" type="text" name="search" required placeholder="Search">
+          <button class="searchButton" type="submit" value="Submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+	  	</div>
+	  	<div class="nav-cart">
+	  		<a href="cart.html">Cart</a>
+	  	</div>
+	  	<div class="nav-login">
+	  		<a href="login.html">Login</a>
+	  	</div>
+  	</div>
+  </nav>
+
+  <div class="main">
+  	<div class="tb">
+      <p>
+        <h3> We are not responsible for any legal ramifications of downloading the games provided on this site or of any viruses or malware you may receive </h3>
+
+        <h3> UNDER NO CIRCUMSTANCES SHALL A COMPANY OR ITS AFFILIATES, PARTNERS, SUPPPLIERS, OR LISCENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH YOU ACCESS OR USE OF OR INABILITY TO ACCESS OR USE THE APPLICATION AND ANY THIRD PARTY CONTENT AND SERVICES, WHETHER OR NOT THE DAMAGES WERE FORESEEABLE AND WHETHER OR NOT COMPANY WAS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, COMPANY'S AGGREGATE LIABILITY TO YOU (WHETHER UNDER CONTRACT, TORT, STATUTE, OR OTHERWISE) SHALL NOT EXCEED THE AMOUNT OF FIFTY DOLLARS ($50.00). THE FOREGOING LIMITATIONS WILL APPLY EVEN IF THE ABOVE STATED REMEDY FAILS OF ITS ESSENTIAL PURPOSE. </h3>
+
+        <h3> We do not make any warranties about the completeness, reliability and accuracy of this information. ANY ACTION YOU TAKE UPON THE INFORMATION ON THIS WEBSITE IS STRICTLY AT YOU OWN RISK, and we will not be liable for any losses and damages in connection with the use of our website. </h3>
+      </p>
+  	</div>
+  </div>
+
+  <div class="sidebar">
+
+      <div class="shopping-cart">
+      </div> <!shopping-cart>
+
+  </div> <!sidebar>
+
+  <footer>
+
+    <div class="footerGrid">
+
+      <div class="footerCopyright">
+        <p> &copy; Property of Electronic Farts, LLC</p>
+      </div>
+
+      <div class="footerContact">
+        <p><a href="support.html">Contact Us</a></p>
+      </div>
+
+      <div class="footerConnect">
+        <p>Connect With Us</p>
+        <a href="https://www.instagram.com/exceptionalsiteinc/">
+          <img src="../images/icons/instagramIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://twitter.com/ExceptionalSite/">
+          <img src="../images/icons/twitterIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://www.youtube.com/channel/UCiREnMhEko4l5SICsCcYaxQ/">
+          <img src="../images/icons/youtubeIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+      </div>
+
+    </div> <!footerGrid>
+
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+img{
+	max-width: 100%;
+  	height: auto;
+}
+
+.main{
+	display: grid;
+	grid-template-areas: 
+	"title title"
+	"image description"
+	"price link"
+	"detail detail";
+	grid-template-rows:  100px 300px 75px 1fr;
+	grid-auto-columns: 1fr 1fr;
+	margin: 0px 20px 20px 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+}
+
+.main > div{
+	text-align: center;
+	padding: 10px;
+}
+
+.product-title{
+	grid-area: title;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.product-image{
+	grid-area: image;
+}
+
+.product-image img{
+	max-width: 100%;
+	height: 90%;
+}
+
+.product-price{
+	grid-area: price;
+	font-size:  2em;
+	font-weight: bold;
+}
+
+.bulleted-list{
+	grid-area: description;
+}
+
+li{
+	font-size: 1.5em;
+	padding: 25px;
+}
+
+.detail{
+	grid-area: detail;
+	font-size: 12px;
+}
+
+.checkout-link{
+	grid-area: link;
+	font-size:  2em;
+	font-weight: bold;
+	border-radius: 3px;
+	box-sizing: border-box;
+	margin-left: 30%;
+	margin-right: 30%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkout-link:hover{
+	background-color: #d1d1d1;
+	cursor: pointer;
+}
+
+

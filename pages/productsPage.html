@@ -1,0 +1,323 @@
+<!Robert Freeman 3/5/2020 >
+
+<!DOCTYPE html5>
+<html lang='en'>
+<head>
+	<meta charset="utf-8">
+	<title>ESI - Products</title>
+	<link rel = "stylesheet" type="text/css" href = "../style/productsPage.css">
+	<link rel="stylesheet" type="text/css" href="../style/master.css">
+	<link rel="stylesheet" type="text/css" href="../style/shopping-cart.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<title>ESI - Home</title>
+  <script type="text/javascript" src="/scripts/shoppingCartFunctions.js"></script>
+  <script type="text/javascript" src="/scripts/signup.js"></script>
+  <script type="text/javascript" src="/scripts/search.js"></script>
+  <script>
+    function mainPageOnLoad(){
+      renderCart();
+      renderLogin();
+      getProductInfo();
+      loadSearchBar();
+    }
+  </script>
+</head>
+
+<body onload="mainPageOnLoad()">
+
+	<nav>
+  	<div class="navbar">
+  		<div class="nav-logo">
+	  		<a href="../index.html" title="Home"><img src="../images/logo.png" alt="Logo not found. Not good"></a>
+	  	</div>
+	  	<div class="nav-dropdown products">
+	  		<a href="productsPage.html">Products</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="products/product1.html">
+	  				Run, Escape
+	  			</a>
+	  			<a href="products/product2.html">
+	  				Two Weeks
+	  			</a>
+	  			<a href="products/product3.html">
+	  				OverClock
+	  			</a>
+  			</div>
+  		</div>
+	  	<div class="nav-dropdown about" >
+	  		<a href="about.html">About</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="about.html">About</a>
+        		<a href="support.html">Support</a>
+	  		</div>
+	  	</div>
+			<div class="navSearch">
+	  		<div class="searchBar">
+          <input class="searchQuery" type="text" name="search" required placeholder="Search">
+          <button class="searchButton" type="submit" value="Submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+	  	</div>
+	  	<div class="nav-cart">
+	  		<a href="cart.html">Cart</a>
+	  	</div>
+	  	<div class="nav-login">
+	  		<a href="login.html">Login</a>
+	  	</div>
+
+  </nav>
+
+
+	<div class="main">
+
+		<div class="grid-container">
+
+			<div class="Product1">
+				<a href="products/product1.html">
+					<div class="polaroid">
+						<img src="../images/runner.jpeg" alt="Image not found. Oops!" style="width:100%;" onclick=>
+						<div class="container">
+							<p>Run, Escape</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product2">
+				<a href="products/product2.html">
+					<div class="polaroid">
+						<img src=../images/twoWeeks.jpeg alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Two Weeks</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product3">
+				<a href="products/product3.html">
+					<div class="polaroid">
+						<img src="../images/overclocked.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Overclocked</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product4">
+				<a href="products/product4.html">
+					<div class="polaroid">
+						<img src="../images/product1thumbnail.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Prrtol</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product5">
+				<a href="products/product5.html">
+					<div class="polaroid">
+						<img src="../images/grandAutoThief.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Grand Auto Thief</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product6">
+				<a href="products/product6.html">
+					<div class="polaroid">
+						<img src="../images/superSmushBros.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Super Smush Brothers</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product7">
+				<a href="products/product7.html">
+					<div class="polaroid">
+						<img src="../images/mockBand.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Mock Band</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product8">
+				<a href="products/product8.html">
+					<div class="polaroid">
+						<img src="../images/dreadSpace.jpg" alt="Image not found. Oops!" style="width:100%; height:80%;">
+						<div class="container">
+							<p>Dread Space</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product9">
+				<a href="products/product9.html">
+					<div class="polaroid">
+						<img src="../images/electronicFarts.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Electronic Farts</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product10">
+				<a href="products/product10.html">
+					<div class="polaroid">
+						<img src="../images/grandAutoThief.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Grand Auto Thief 2</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product11">
+				<a href="products/product11.html">
+					<div class="polaroid">
+						<img src="../images/littlestResized.jpg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>My Littlest Nightmare</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="Product12">
+				<a href="products/product12.html">
+					<div class="polaroid">
+						<img src="../images/grandAutoThief.jpeg" alt="Image not found. Oops!" style="width:100%;">
+						<div class="container">
+							<p>Grand Auto Thief 4</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div> <!grid-container>
+
+	</div> <!main>
+
+
+
+	<div class="sidebar">
+
+	    <div class="shopping-cart">
+
+
+
+	    </div> <!shopping-cart>
+
+	</div> <!sidebar>
+
+
+
+	<footer>
+
+     <div class="footerGrid">
+
+      <div class="footerCopyright">
+        <p> &copy; Property of Electronic Farts, LLC</p>
+      </div>
+
+      <div class="footerContact">
+        <p><a href="support.html">Contact Us</a></p>
+      </div>
+
+      <div class="footerConnect">
+        <p>Connect With Us</p>
+        <a href="https://www.instagram.com/exceptionalsiteinc/">
+          <img src="../images/icons/instagramIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://twitter.com/ExceptionalSite/">
+          <img src="../images/icons/twitterIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://www.youtube.com/channel/UCiREnMhEko4l5SICsCcYaxQ/">
+          <img src="../images/icons/youtubeIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+      </div>
+
+    </div> <!footerGrid>
+
+  </footer>
+
+</body>
+</html>
+
+
+		<!--
+		<table>
+			<div class="table-spacing">
+				<tr><td>
+						<h2>Run, Escape</h2><a href="products/product1.html">
+							<img src="../images/runner.jpeg" alt="Image not found. Oops!" style="max-width:100px; max-height:100px"></a></td>
+
+					<td>
+						<h2>Two Weeks</h2><a href="products/product2.html">
+							<img src="../images/twoWeeks.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+
+					<td>
+						<h2>Overclocked</h2><a href="products/product3.html">
+							<img src="../images/overclocked.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<h2>Prrtol</h2><a href="../images/product1thumbnail.jpeg">
+							<img src="../images/product1thumbnail.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+
+					<td>
+						<h2>Grand Auto Thief</h2><a href="products/product5.html">
+							<img src="../images/grandAutoThief.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+
+					<td>
+						<h2>Super Smush Brothers</h2><a href="products/product6.html">
+							<img src="../images/superSmushBros.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<h2>Mock Band</h2><a href="products/product7.html">
+							<img src="../images/mockBand.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+
+					<td>
+						<h2>Dread Space</h2><a href="products/product8.html">
+							<img src="../images/dreadSpace.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+					<td>
+						<h2>Electronic Farts</h2><a href="products/product9.html">
+							<img src="../images/electronicFarts.jpeg" alt="Image not found. Oops!" style="width:460px; height:500px;">
+						</a>
+					</td>
+				</tr>
+			</div>
+
+		</table>
+
+		<a href="">
+		-->

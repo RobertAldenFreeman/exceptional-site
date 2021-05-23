@@ -1,0 +1,45 @@
+body {
+  font-family: monospace;
+}
+.form {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #d1d1d1;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.form h1 {
+  text-transform: uppercase;
+}
+.form input[type = "password"],.form input[type = "text"],.form input[type = "submit"] {
+  font-size: 14;
+  font-family: monospace;
+  color: black;
+  width: 175px;
+  border: 2px solid #5a14a6;
+  background: none;
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+  padding: 10px 10px;
+  border-radius: 13px;
+  transition: 0.3s;
+  outline: none;
+}
+.form input[type = "password"]:focus,.form input[type = "text"]:focus {
+  width: 225px;
+  border-color: #23b0db;
+}
+.form input[type = "submit"] {
+  width: 100px;
+  border: 2px solid #5a14a6;
+  margin: 30px auto;
+}
+.form input[type = "submit"]:hover {
+  width: 150px;
+  border-color: #23b0db;
+}

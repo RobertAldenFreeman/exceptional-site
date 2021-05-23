@@ -1,0 +1,203 @@
+html{
+	background-color: white;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 100px 1fr 100px;
+	grid-template-columns: 200px 1fr 200px;
+	grid-template-areas:
+	"nav nav nav"
+	"main main sidebar"
+	"footer footer footer";
+	overflow-y: scroll;
+	margin: 0px;
+	font-family:monospace;
+}
+nav{
+	grid-area: nav;
+	background-color: white;
+	color: black;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: #23b0db;
+}
+a:hover {
+    color: #5a14a6;
+		border-radius: 3px;
+}
+
+.nav-logo img{
+	width: 420px;
+	max-height:  100%;
+	grid-area: logo;
+}
+
+.navbar{
+	display: grid;
+	height: 100%;
+	align-items: center;
+	justify-items: center;
+	background-color: white;
+	grid-template-areas: "logo products about search cart login";
+	grid-template-columns: 450px 1fr 1fr 1.8fr 1fr 1fr;
+}
+
+.navbar > div{
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	text-align: center;
+	flex: 1;
+	height: 100%;
+}
+
+
+.nav-logo a {
+	padding:  0px !important;
+}
+
+.products{
+	grid-area: products;
+}
+
+.about{
+	grid-area: about;
+}
+
+
+.navSearch {
+	grid-area: search;
+}
+.searchBar {
+    background: #454545;
+    border-radius: 10px;
+    padding: 5px;
+}
+.searchBar:hover > .searchQuery, .searchQuery:focus {
+    width: 200px;
+    padding: 0 6px;
+}
+.searchBar:hover > .searchButton, .searchQuery:focus + .searchButton {
+  background: white;
+  color : #454545;
+}
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #454545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+		outline: none;
+}
+.searchQuery {
+		font-family: monospace;
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    line-height: 40px;
+    width: 0px;
+		cursor: none;
+}
+
+
+
+.nav-cart{
+	grid-area: cart;
+}
+
+.nav-login{
+	grid-area: login;
+}
+
+.navbar > div > a{
+	padding: 20px;
+}
+
+.navbar a:hover{
+	background-color: #d1d1d1;
+}
+
+
+.nav-dropdown:hover .nav-dropdown-content{
+	display: block;
+	border-radius: 3px;
+}
+
+.nav-dropdown-content{
+	display: none;
+ 	position: absolute;
+ 	background-color: white;
+ 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 	z-index: 1;
+ 	transform: translate(0px,50px)
+}
+
+.nav-dropdown-content a{
+	display: block;
+	padding: 5px;
+}
+
+.main{
+	grid-area:  main;
+	grid-auto-rows: 1fr;
+	overflow-y: hidden;
+}
+
+.sidebar{
+	border-radius: 5px;
+}
+
+.total_price{
+	text-align: center !important;
+	font-size: 20px;
+	font-weight: 400;
+	display: inline-block;
+}
+
+
+footer{
+	grid-area: footer;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: white;
+	grid-template-rows: 100px;
+}
+.footerGrid {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"copyright contact connect";
+}
+.footerCopyright {
+	grid-area: copyright;
+	justify-self: center;
+	align-self: center;
+}
+.footerContact {
+	grid-area: contact;
+	justify-self: center;
+	align-self: center;
+}
+.footerConnect {
+	grid-area: connect;
+	justify-self: center;
+	text-align: center;
+}

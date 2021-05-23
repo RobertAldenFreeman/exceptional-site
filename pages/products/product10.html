@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Exceptional Store</title>
+	<link rel="stylesheet" type="text/css" href="../../style/master.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="../../style/individualProducts.css">
+	<link rel="stylesheet" type="text/css" href="../../style/shopping-cart.css">
+	<script type="text/javascript" src="../../scripts/shoppingCartFunctions.js"></script>
+	<script type="text/javascript" src="../../scripts/signup.js"></script>
+	<script type="text/javascript" src="/scripts/search.js"></script>
+	<script>
+		function individualProductOnLoad(){
+			loadCartFunctionality();
+			renderLogin();
+			loadSearchBar();
+		}
+	</script>
+</head>
+
+<body onload="individualProductOnLoad()">
+	<nav>
+  	<div class="navbar">
+  		<div class="nav-logo">
+	  		<a href="../../index.html" title="Home"><img src="../../images/logo.png" alt="Logo not found. Not good"></a>
+	  	</div>
+	  	<div class="nav-dropdown products">
+	  		<a href="../../pages/productsPage.html">Products</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="../../pages/products/product1.html">
+	  				Run, Escape
+	  			</a>
+	  			<a href="../../pages/products/product2.html">
+	  				Two Weeks
+	  			</a>
+	  			<a href="../../pages/products/product3.html">
+	  				OverClock
+	  			</a>
+  			</div>
+  		</div>
+	  	<div class="nav-dropdown about" >
+	  		<a href="../../pages/about.html">About</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="../../pages/about.html">About</a>
+        		<a href="../../pages/support.html">Support</a>
+	  		</div>
+	  	</div>
+			<div class="navSearch">
+	  		<div class="searchBar">
+          <input class="searchQuery" type="text" name="search" required placeholder="Search">
+          <button class="searchButton" type="submit" value="Submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+	  	</div>
+	  	<div class="nav-cart">
+	  		<a href="../../pages/cart.html">Cart</a>
+	  	</div>
+	  	<div class="nav-login">
+	  		<a href="../../pages/login.html">Login</a>
+	  	</div>
+  	</div>
+  </nav>
+
+
+	<div class="main">
+		<div class="product-title">
+			Grand Auto Thief 2
+		</div>
+		<div class="product-image">
+			<img src="../../images/grandAutoThiefCopy.jpeg">
+		</div>
+		<div class="bulleted-list">
+			<ul>
+				<li>
+					Cause immense harm without regard for society
+				</li>
+				<li>
+					Irritate concerned parents everywhere
+				</li>
+			</ul>
+		</div>
+		<div class="detail">
+			Grand Theft Auto (GTA) is an action-adventure video game series created by David Jones and Mike Dailly;[2] the later titles of which were created by brothers Dan and Sam Houser, Leslie Benzies and Aaron Garbut. It is primarily developed by British development house Rockstar North (formerly DMA Design), and published by its parent company, Rockstar Games. The name of the series references the term "grand theft auto", used in the U.S. for motor vehicle theft.
+
+			Most games in the series are set in fictional locales modelled on cities, usually either Liberty City, Vice City or San Andreas, which are stand-ins for New York City, Miami and the state of California, respectively. The first game encompassed three fictional cities, while subsequent titles tend to emphasise a single setting. Gameplay focuses on an open world where the player can choose missions to progress an overall story, as well as engaging in side activities, all consisting of action-adventure, driving, third-person shooting, carjacking, occasional role-playing, stealth and racing elements. The series focuses on many different protagonists who attempt to rise through the ranks of the criminal underworld, although their motives for doing so vary in each game. The series also has elements of the earlier beat 'em up games from the 16-bit era. The antagonists are commonly characters who have betrayed the protagonist or his organisation, or characters who have the most impact impeding the protagonist's progress. Film and music veterans have voiced characters, including Ray Liotta, Dennis Hopper, Samuel L. Jackson, James Woods, Debbie Harry, Axl Rose and Peter Fonda.[3]
+
+			DMA Design began the series in 1997, with the release of the original Grand Theft Auto. As of 2019, the series has eleven stand-alone games and four expansion packs. The third chronological title, Grand Theft Auto III, is considered a landmark title, as it brought the series to a 3D setting and more immersive experience. Subsequent titles have followed and built upon the concept established in Grand Theft Auto III, and received significant acclaim. They have influenced other open-world action games, and led to the label Grand Theft Auto clone on similar games.
+		</div>
+		<div class="product-price">
+			$315
+		</div>
+		<div class="checkout-link">
+			Add to Cart
+		</div>
+	</div>
+
+	<div class="sidebar">
+
+	    <div class="shopping-cart">
+	    </div> <!shopping-cart>
+
+	</div> <!sidebar>
+
+	<footer>
+
+	    <div class="footerGrid">
+
+	      <div class="footerCopyright">
+	        <p> &copy; Property of Electronic Farts, LLC</p>
+	      </div>
+
+	      <div class="footerContact">
+	        <p><a href="../support.html">Contact Us</a></p>
+	      </div>
+
+	      <div class="footerConnect">
+	        <p>Connect With Us</p>
+	        <img src="../../images/icons/instagramIcon.png" alt="Img not found." height="20" width="20">
+	        <img src="../../images/icons/twitterIcon.png" alt="Img not found." height="20" width="20">
+	        <img src="../../images/icons/youtubeIcon.png" alt="Img not found." height="20" width="20">
+	      </div>
+
+	    </div> <!footerGrid>
+
+	  </footer>
+</body>
+</html>

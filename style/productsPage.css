@@ -1,0 +1,63 @@
+.Product1 {
+  grid-area: prodOne;
+}
+.Product2 {
+  grid-area: prodTwo;
+}
+.Product3 {
+  grid-area: prodThree;
+}
+.Product4 {
+  grid-area: prodFour;
+}
+.Product5 {
+  grid-area: prodFive;
+}
+.Product6 {
+  grid-area: prodSix;
+}
+.Product7 {
+  grid-area: prodSeven;
+}
+.Product8 {
+  grid-area: prodEight;
+}
+.Product9 {
+  grid-area: prodNine;
+}
+.Product10 {
+  grid-area: prodTen;
+}
+.Product11 {
+  grid-area: prodEleven;
+}
+.Product12 {
+  grid-area: prodTwelve;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 6% 26% 5% 26% 5% 26% 6%;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+    ". prodOne . prodTwo . prodThree ."
+    ". prodFour . prodFive . prodSix ."
+    ". prodSeven . prodEight . prodNine ."
+    ". prodTen . prodEleven . prodTwelve .";
+	justify-content: center;
+	align-content: center;
+	max-width: 100%;
+}
+
+
+div.polaroid {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}

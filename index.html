@@ -1,0 +1,207 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ESI - Home</title>
+  <link rel="stylesheet" type="text/css" href="style/master.css">
+  <link rel="stylesheet" href="style/homepage.css">
+  <link rel="stylesheet" type="text/css" href="style/shopping-cart.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript" src="/scripts/shoppingCartFunctions.js"></script>
+  <script type="text/javascript" src="/scripts/signup.js"></script>
+  <script type="text/javascript" src="/scripts/search.js"></script>
+</head>
+
+<script>
+  function index_onload(){
+    renderLogin();
+    loadSearchBar();
+    renderCart();
+  }
+</script>
+
+<body onload="index_onload()">
+  <nav>
+  	<div class="navbar">
+  		<div class="nav-logo">
+	  		<a href="index.html" title="Home"><img src="images/logo.png" alt="Logo not found. Not good"></a>
+	  	</div>
+	  	<div class="nav-dropdown products">
+	  		<a href="pages/productsPage.html">Products</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="pages/products/product1.html">
+	  				Run, Escape
+	  			</a>
+	  			<a href="pages/products/product2.html">
+	  				Two Weeks
+	  			</a>
+	  			<a href="pages/products/product3.html">
+	  				OverClock
+	  			</a>
+  			</div>
+  		</div>
+	  	<div class="nav-dropdown about" >
+	  		<a href="pages/about.html">About</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="pages/about.html">About</a>
+        		<a href="pages/support.html">Support</a>
+	  		</div>
+	  	</div>
+	  	<div class="navSearch">
+	  		<div class="searchBar">
+          <input class="searchQuery" type="text" name="search" required placeholder="Search">
+          <button class="searchButton" type="submit" value="Submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+	  	</div>
+	  	<div class="nav-cart">
+	  		<a href="pages/cart.html">Cart</a>
+	  	</div>
+	  	<div class="nav-login">
+	  		<a href="pages/login.html">Login</a>
+	  	</div>
+  	</div>
+  </nav>
+
+  <script src="scripts/search.js"></script>
+
+	<div class="main">
+    <h1>Welcome to Exceptional Site, Inc.!</h1>
+    <h2>The web's greatest retailer of <strong>100% original</strong>, <i>definitely not</i> knock-off games!</h2>
+    <br>
+
+    <div class="FeaturedProducts">
+
+      <div class="FeaturedProductsTitle">
+        <h3>Featured Products</h3>
+      </div>
+
+      <div class="Product1">
+        <a href="pages/products/product6.html">
+          <div class="polaroid">
+            <img src="images/superSmushBrosCopy.jpeg" alt="Img not found." style="width:100%">
+            <div class="container">
+              <p>Super Smush Brothers</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="Product2">
+        <a href="pages/products/product5.html">
+          <div class="polaroid">
+              <img src="images/grandAutoThiefCopy.jpeg" alt="Img not found." style="width:100%">
+            <div class="container">
+              <p>Grand Auto Thief</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div> <!FeaturedProducts>
+
+	</div> <!main>
+
+  <div class="sidebar">
+
+      <div class="shopping-cart">
+        <!div class="titlebox">
+        <!--<div class="titlebox">
+          <div class="title">Shopping Cart</div>
+        </div>
+
+        <div class="item">
+          <div class="image"><img src="images/grandAutoThiefCopy.jpeg" alt=""></div>
+          <div class="description">
+            <span class = "product-name">Grand Auto Thief</span>
+          </div>
+          <div class="quantity">
+              <input type="text" value="1">
+          </div>
+          <div class="pricing">
+              <div class="total-price">
+              $315
+              </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="image"><img src="images/superSmushBrosCopy.jpeg" alt=""></div>
+          <div class="description">
+            <span class = "product-name">Super Smush Bros</span>
+          </div>
+          <div class="quantity">
+              <input type="text" value="1">
+          </div>
+          <div class="pricing">
+              <div class="total-price">
+              $315
+              </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="image"><img src="images/product3thumbnail.jpeg" alt=""></div>
+          <div class="description">
+            <span class = "product-name">Prrtol</span>
+          </div>
+          <div class="quantity">
+              <input type="text" value="1">
+          </div>
+          <div class="pricing">
+              <div class="total-price">
+              $315
+              </div>
+          </div>
+        </div>
+
+        <div class="checkout">
+          <a href = "pages/checkout.html">
+            Check Out -->
+
+          <!--<label class = "total-price" for="checkoutbtn">Check Out</label>
+          <input type="button" class="checkoutbtn btn" name="checkoutbtn">
+          -->
+          <!--</a>
+        </div>-->
+
+
+      </div> <!shopping-cart>
+
+  </div> <!sidebar>
+
+
+  <footer>
+
+       <div class="footerGrid">
+
+      <div class="footerCopyright">
+        <p> &copy; Property of Electronic Farts, LLC</p>
+      </div>
+
+      <div class="footerContact">
+        <p><a href="pages/support.html">Contact Us</a></p>
+      </div>
+
+      <div class="footerConnect">
+        <p>Connect With Us</p>
+        <a href="https://www.instagram.com/exceptionalsiteinc/">
+          <img src="images/icons/instagramIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://twitter.com/ExceptionalSite/">
+          <img src="images/icons/twitterIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://www.youtube.com/channel/UCiREnMhEko4l5SICsCcYaxQ/">
+          <img src="images/icons/youtubeIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+      </div>
+
+    </div> <!footerGrid>
+
+  </footer>
+
+</body>
+
+</html>

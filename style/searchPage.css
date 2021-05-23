@@ -1,0 +1,22 @@
+.grid-container{
+	display: grid;
+  box-sizing: border-box;
+	grid-template-columns: repeat(3,26%);
+	grid-template-rows: repeat(auto-fill,auto);
+	justify-content: space-around;
+	align-content: center;
+	max-width: 100%;
+}
+
+
+div.polaroid {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}

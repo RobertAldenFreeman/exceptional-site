@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="../style/master.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!--NOTE: THIS FILE MUST NOT INCLUDE shoppingCartFunctions.js-->
+	<script type="text/javascript" src="../scripts/individualShoppingCart.js"></script>
+	<script type="text/javascript" src="../scripts/signup.js"></script>
+	<script type="text/javascript" src="../scripts/search.js"></script>
+	<title>ESI - Cart</title>
+	<!--
+=======
+>>>>>>> 219e6e177430a1860c62c312a3a6a5082fb9b41f
+	<link rel="stylesheet" type="text/css" href="../style/shopping-cart.css">
+	-->
+</head>
+<style>
+*{
+	box-sizing: border-box;
+}
+
+body{
+	display: grid;
+	grid-template-areas:
+	"nav"
+	"everything-else" !important;
+	grid-template-columns: 100% !important;
+	grid-template-rows: 100px 1fr !important;
+
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: monospace;
+}
+
+.container{
+	display: flex;
+	align-items: center;
+	grid-area: "everything-else";
+}
+
+.page-body{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-x: auto;
+	overflow-y: auto;
+	margin-right: 450px;
+}
+
+.sidebar{
+	width: 450px;
+	height: 90%;
+	margin-top: 10%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: #b3c9f5;
+	overflow-x: hidden;
+	border-radius: 5px;
+}
+
+.shopping-cart{
+	width: 430px;
+	height: 87%;
+	margin: 5px auto;
+	background-color: #ffffff;
+	box-shadow: 3px 4px 5px 0px rgba(0,0,0,.6);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+
+.titlebox{
+	text-align: center;
+	height: 30px;
+	border-bottom: 1px solid #dde4eb;
+}
+
+.title{
+	color: #b3c9f5;
+	font-size: 20px;
+	font-weight: 400;
+	display: inline-block;
+}
+
+.item{
+	height: 120px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid #dde4eb;
+	border-bottom: 1px solid #dde4eb;
+}
+
+.item:nth-child(2){
+
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  /*position: relative;
+  width: auto;
+  height: auto;
+  margin: 10px;*/
+}
+
+.delete-btn{
+	width:17px;
+	height: 17px;
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100px;
+}
+
+.image img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+.description {
+  width: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+  margin: 10px 10px;
+}
+
+.description .product-name{
+	margin: 15px 10px;
+	font-weight: bold;
+}
+
+.description .product-description{
+	font-size: 12px;
+}
+
+.amount{
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	align-items: center;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+.btn{
+  width: 30px;
+  height: 30px;
+  background-color: #68b0ed;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.pricing{
+	display:flex;
+	flex-direction: row;
+	padding-top: 27px;
+	align-items: center;
+}
+
+.total-price {
+  width: 83px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+.checkout{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	height: 120px;
+	width: 100%;
+	display: flex;
+	border-top: 1px solid #dde4eb;
+	border-bottom: 1px solid #dde4eb;
+}
+.checkout-null{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	height: 120px;
+	width: 100%;
+	display: flex;
+	border-top: 1px solid #dde4eb;
+	border-bottom: 1px solid #dde4eb;
+	color: gray !important;
+}
+
+.shopping-cart-fullsize{
+	width: 80%;
+	height: max-content;
+	margin: 80px auto;
+	z-index: 1;
+	overflow-x: hidden;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+</style>
+
+<script>
+	function cart_html_onload(){
+	if(localStorage.getItem('cart') == null){
+		let cart = [];
+		localStorage.setItem('cart',JSON.stringify(cart));
+		}
+		renderLargeCart();
+		renderLogin();
+		loadSearchBar();
+	}
+</script>
+
+<body onload="cart_html_onload()">
+	<nav>
+		<div class="navbar">
+			<div class="nav-logo">
+				<a href="../index.html" title="Home"><img src="../images/logo.png" alt="Logo not found. Not good"></a>
+			</div>
+			<div class="nav-dropdown products">
+				<a href="productsPage.html">Products</a>
+				<div class="nav-dropdown-content">
+					<a href="products/product1.html">
+						Run, Escape
+					</a>
+					<a href="products/product2.html">
+						Two Weeks
+					</a>
+					<a href="products/product3.html">
+						OverClock
+					</a>
+				</div>
+			</div>
+			<div class="nav-dropdown about" >
+				<a href="about.html">About</a>
+				<div class="nav-dropdown-content">
+					<a href="about.html">About</a>
+						<a href="support.html">Support</a>
+				</div>
+			</div>
+			<div class="navSearch">
+	  		<div class="searchBar">
+          <input class="searchQuery" type="text" name="search" required placeholder="Search">
+          <button class="searchButton" type="submit" value="Submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+	  	</div>
+			<div class="nav-cart">
+				<a href="cart.html">Cart</a>
+			</div>
+			<div class="nav-login">
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+	</nav>
+
+		<div class="shopping-cart-fullsize">
+				<div class="shopping-cart">
+			
+		</div>
+	</div>
+
+	<footer>
+
+    <div class="footerGrid">
+
+      <div class="footerCopyright">
+        <p> &copy; Property of Electronic Farts, LLC</p>
+      </div>
+
+      <div class="footerContact">
+        <p><a href="support.html">Contact Us</a></p>
+      </div>
+
+      <div class="footerConnect">
+        <p>Connect With Us</p>
+        <a href="https://www.instagram.com/exceptionalsiteinc/">
+          <img src="../images/icons/instagramIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://twitter.com/ExceptionalSite/">
+          <img src="../images/icons/twitterIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://www.youtube.com/channel/UCiREnMhEko4l5SICsCcYaxQ/">
+          <img src="../images/icons/youtubeIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+      </div>
+
+    </div> <!footerGrid>
+
+  </footer>
+
+	<!--<div>
+		<table align="center" cellspacing="15" rules = "rows" cellpadding="15">
+			<tr>
+				<td>
+					<img src="../images/icons8-delete-50.png" alt="" width = "30" height = "30">
+				</td>
+				<td colspan="4">
+					<img src="../images/product1thumbnail.jpeg" alt="" width = "200" height = "100">
+				</td>
+				<td>
+					<img src="../images/icons8-plus-math-50.png" alt="" width = "30" height = "30">
+				</td>
+				<td colspan="2">
+					<input type="text" value = "1">
+				</td>
+				<td>
+					<img src="../images/icons8-subtract-50.png" alt="" width = "30" height = "30">
+				</td>
+			</tr>
+			<br>
+			<br>
+			<tr>
+				<td>
+					<img src="../images/icons8-delete-50.png" alt="" width = "30" height = "30">
+				</td>
+				<td colspan="4">
+					<img src="../images/electronicFarts.jpeg" alt="" width = "200" height = "100">
+				</td>
+				<td>
+					<img src="../images/icons8-plus-math-50.png" alt="" width = "30" height = "30">
+				</td>
+				<td colspan="2">
+					<input type="text" value = "1">
+				</td>
+				<td>
+					<img src="../images/icons8-subtract-50.png" alt="" width = "30" height = "30">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="../images/icons8-delete-50.png" alt="" width = "30" height = "30">
+				</td>
+				<td colspan="4">
+					<img src="../images/grandAutoThief.jpeg" alt="" width = "200" height = "100">
+				</td>
+				<td>
+					<img src="../images/icons8-plus-math-50.png" alt="" width = "30" height = "30">
+				</td>
+				<td colspan="2">
+					<input type="text" value = "1">
+				</td>
+				<td>
+					<img src="../images/icons8-subtract-50.png" alt="" width = "30" height = "30">
+				</td>
+			</tr>
+			<tr>
+				<td colspan = "9" align = "center">
+					<a href="checkout.html">
+						Check Out
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>-->
+</body>
+</html>
+
+<!--
+	<div class="titlebox">
+				<div class="title">Shopping Cart</div>
+			</div>
+			<div class="item">
+				<div class="buttons">
+					<input class="delete-btn btn" type="image" src="../images/icons8-delete-50.png">
+				</div>
+				<div class="image"><img src="../images/grandAutoThiefCopy.jpeg" alt=""></div>
+				<div class="description">
+					<span class = "product-name">Grand Auto Thief</span>
+					<span class = "product-description">Steal Cars</span>
+				</div>
+				<div class="amount">
+					<div class="quantity">
+						<input type="image" class="plus btn" src="../images/icons8-plus-math-50.png">
+						<input type="text" value="1">
+						<input type="image" class="minus btn" src="../images/icons8-subtract-50.png">
+					</div>
+					<div class="pricing">
+						<div class="total-price">
+						$315
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="buttons">
+					<input class="delete-btn btn" type="image" src="../images/icons8-delete-50.png">
+				</div>
+				<div class="image"><img src="../images/superSmushBrosCopy.jpeg" alt=""></div>
+				<div class="description">
+					<span class = "product-name">Super Smush Bros</span>
+					<span class = "product-description">Smush Bros</span>
+				</div>
+				<div class="amount">
+					<div class="quantity">
+						<input type="image" class="plus btn" src="../images/icons8-plus-math-50.png">
+						<input type="text" value="1">
+						<input type="image" class="minus btn" src="../images/icons8-subtract-50.png">
+					</div>
+					<div class="pricing">
+						<div class="total-price">
+						$315
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="buttons">
+					<input class="delete-btn btn" type="image" src="../images/icons8-delete-50.png">
+				</div>
+				<div class="image"><img src="../images/product3thumbnail.jpeg" alt=""></div>
+				<div class="description">
+					<span class = "product-name">Prrtol</span>
+					<span class = "product-description">Cats and Portals</span>
+				</div>
+				<div class="amount">
+					<div class="quantity">
+						<input type="image" class="plus btn" src="../images/icons8-plus-math-50.png">
+						<input type="text" value="1">
+						<input type="image" class="minus btn" src="../images/icons8-subtract-50.png">
+					</div>
+					<div class="pricing">
+						<div class="total-price">
+						$315
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="checkout">
+				<a href = "checkout.html">
+					Check Out
+				</a>
+			</div>
+-->
+
+

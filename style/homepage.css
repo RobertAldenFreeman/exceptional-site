@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+}
+div.polaroid {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.FeaturedProducts {
+  display: grid;
+  grid-template-columns: 10% 35% 10% 35% 10%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    "title title title title title"
+    ". prodOne . prodTwo .";
+  justify-items: center;
+}
+.FeaturedProductsTitle {
+  grid-area: title;
+}
+.Product1 {
+  grid-area: prodOne;
+}
+.Product2 {
+  grid-area: prodTwo;
+}

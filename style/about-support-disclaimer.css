@@ -1,0 +1,13 @@
+.tb {
+	background-color : #d1d1d1;
+	border: 5px solid #454545;
+	width: 95%;
+	padding:10px;
+	box-shadow: 5px 10px #888888;
+	overflow: auto;
+
+}
+
+ .main a {
+	color: black !important;
+}

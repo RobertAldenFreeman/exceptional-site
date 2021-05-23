@@ -1,0 +1,116 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ESI - About</title>
+  <link rel="stylesheet" type="text/css" href="../style/master.css">
+  <link rel="stylesheet" type="text/css" href="../style/about-support-disclaimer.css">
+  <link rel="stylesheet" type="text/css" href="../style/shopping-cart.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript" src="../scripts/shoppingCartFunctions.js"></script>
+  <script type="text/javascript" src="../scripts/signup.js"></script>
+  <script type="text/javascript" src="../scripts/search.js"></script>
+  <script>
+    function mainPageOnLoad(){
+      renderCart();
+      renderLogin();
+      loadSearchBar();
+    }
+  </script>
+</head>
+
+<body onload="mainPageOnLoad()">
+  <nav>
+  	<div class="navbar">
+  		<div class="nav-logo">
+	  		<a href="../index.html" title="Home"><img src="../images/logo.png" alt="Logo not found. Not good"></a>
+	  	</div>
+	  	<div class="nav-dropdown products">
+	  		<a href="productsPage.html">Products</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="products/product1.html">
+	  				Run, Escape
+	  			</a>
+	  			<a href="products/product2.html">
+	  				Two Weeks
+	  			</a>
+	  			<a href="products/product3.html">
+	  				OverClock
+	  			</a>
+  			</div>
+  		</div>
+	  	<div class="nav-dropdown about" >
+	  		<a href="about.html">About</a>
+	  		<div class="nav-dropdown-content">
+	  			<a href="about.html">About</a>
+        		<a href="support.html">Support</a>
+	  		</div>
+	  	</div>
+      <div class="navSearch">
+	  		<div class="searchBar">
+          <input class="searchQuery" type="text" name="search" required placeholder="Search">
+          <button class="searchButton" type="submit" value="Submit">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+	  	</div>
+	  	<div class="nav-cart">
+	  		<a href="cart.html">Cart</a>
+	  	</div>
+	  	<div class="nav-login">
+	  		<a href="login.html">Login</a>
+	  	</div>
+  	</div>
+  </nav>
+
+
+  <div class="main">
+  	<div class="tb">
+	    <h1> About Us </h1>
+	    <h3> In a land far far away, in a time long forgotten, Exceptional Site Incorporated sprang into life. In the early days of the ancient year of 2020, a group of four Computer Science students formed a group; not any group, mind you, but the Exceptional Site Incorporated group. We are a site specializing in the distribution of third-party knock-off games that may or may not contain malware or other things that may be harmful to your computer* If you are like us, you do not fear a little risk. We welcome you to join in our dream of worldwide video game distributions. We thank you for helping us make the world a better place! </h3>
+
+    <h3> If you would like to apply to become a part of our team, please email us at <a href="mailto:positions.exceptionalsiteinc@example.com?subject=Hiring Application">positions.exceptionalsiteinc@example.com</a></h3>
+
+    <h5> *<a href="disclaimers.html" title="disclaimers">disclaimers</a></h5>
+    </div>
+  </div>
+
+  <div class="sidebar">
+
+      <div class="shopping-cart">
+      </div> <!shopping-cart>
+
+  </div> <!sidebar>
+
+  <footer>
+
+      <div class="footerGrid">
+
+      <div class="footerCopyright">
+        <p> &copy; Property of Electronic Farts, LLC</p>
+      </div>
+
+      <div class="footerContact">
+        <p><a href="support.html">Contact Us</a></p>
+      </div>
+
+      <div class="footerConnect">
+        <p>Connect With Us</p>
+        <a href="https://www.instagram.com/exceptionalsiteinc/">
+          <img src="../images/icons/instagramIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://twitter.com/ExceptionalSite/">
+          <img src="../images/icons/twitterIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+        <a href="https://www.youtube.com/channel/UCiREnMhEko4l5SICsCcYaxQ/">
+          <img src="../images/icons/youtubeIcon.png" alt="Img not found." height="30" width="30">
+        </a>
+      </div>
+
+    </div> <!footerGrid>
+
+  </footer>
+
+</body>
+
+</html>
